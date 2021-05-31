@@ -72,3 +72,29 @@ nav ul li {
 nav ul li:hover {
   border-bottom:2px solid var(--orange);
 }
+
+.poster-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:500px;
+  height:500px;
+  border-radius:50%;
+  overflow: hidden;
+}
+
+.yellow {
+  background-image:linear-gradient(to right, #f8e48b, #e8b826);
+}
+
+.green {
+  background-image:linear-gradient(to right, #7bdf87, #50e762);
+}
+
+.red {
+  background-image:linear-gradient(to right, #ee89be, #d9529a);
+}
+
+.poster-background img{
+  width:270px;
+}
