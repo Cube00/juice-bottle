@@ -2,7 +2,9 @@ import Slider from '../components/UI/slider'
 
 const Main = () => {
   return <>
-    <Slider />
+    <section className="main-page">
+      <Slider />
+    </section>
   </>
 }
 
