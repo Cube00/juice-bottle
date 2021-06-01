@@ -2,12 +2,19 @@ import {connect} from 'react-redux'
 import {data} from '../../data/data1'
 import {PREW_SLIDE, NEXT_SLIDE} from '../actions'
 import {IoIosArrowBack} from 'react-icons/io'
+import Social from './social'
 
-const Slider = ({content, moveNext, moveBack}) =>{
+const Slider = ({content,id, moveNext, moveBack}) =>{
   const {name, slogan, description, img, background} = content;
   return <>
     <div className="slider-item">
       <div className={`poster-background `+ `${background}`}>
+        {data.map((fruits)=>{
+          return <div key={fruits.id} className={fruits.id === id + 1 ? `fruits active` : 'fruits'}>
+            <img  className="img-fruit" src={fruits.fruit.img1} alt=""/>
+            <img className="img-fruit2" src={fruits.fruit.img2} alt=""/>
+          </div>
+        })}
         <img src={img} draggable="false" alt="poster"/>
         <button className="arrow-move prew" onClick={moveBack}>
           <IoIosArrowBack/>
@@ -22,6 +29,7 @@ const Slider = ({content, moveNext, moveBack}) =>{
         <h3>{slogan}</h3>
         <button className="orderBtn">Order now</button>
       </div>
+      <Social />
     </div>
   </>
 }
