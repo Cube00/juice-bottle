@@ -1,3 +1,5 @@
+import {BrowserRouter as Router, Link } from "react-router-dom";
+
 import {RiSearch2Line} from 'react-icons/ri';
 import {GiShoppingBag} from 'react-icons/gi';
 import Logo from '../../assets/images/logo.png'
@@ -16,22 +18,24 @@ const Header = () =>{
       <div className="logo">
         <img src={Logo} alt="logo" />
       </div>
-      <nav>
-        <ul>
-          <li>
-            Home
-          </li>
-          <li>
-            About
-          </li>
-          <li>
-            Flavours
-          </li>
-          <li>
-            Contact
-          </li>
-        </ul>
-      </nav>
+
+        <nav>
+          <ul>
+            <li>
+              <Link to='/'>Home</Link>
+            </li>
+            <li>
+              <Link to='/about'>About</Link>
+            </li>
+            <li>
+              <Link to='/flavours'>Flavours</Link>
+            </li>
+            <li>
+              <Link to='/contact'>Contact</Link>
+            </li>
+          </ul>
+        </nav>
+
     </div>
   </header>
 }
