@@ -263,17 +263,19 @@ nav ul li a:hover {
 .flavours-container{
   margin:10px 25px;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 
 .flavour_item{
   position: relative;
-  padding:10px;
+  margin:10px 40px 30px 0px;
   width:250px;
+  height:400px;
   background-color:#ececec;
   border-radius:6px;
-  margin:10px 40px 30px 0px;
+  cursor:pointer;
+  transition: 0.7s;
 }
 
 .fl-poster-div {
@@ -305,25 +307,52 @@ nav ul li a:hover {
   color: #677c90;
 }
 
+
 .fruit-image {
   position: absolute;
   top:0;
   left:0;
-  margin-left:-10px;
-  margin-top:-10px;
   display: flex;
   justify-content: center;
   align-items: center;
   width:50px;
   height:50px;
+  margin-left:-10px;
+  margin-top:-10px;
   background-color:#fff;
   border-radius:50%;
   overflow: hidden;
   border:4px solid#dbdbdd;
+  transition: 0.7s;
 }
 
 .fruit-image img {
   width:25px;
+}
+
+.flavour_item:hover .fruit-image {
+  transform:scale(1.2);
+}
+
+.flavour-block{
+  position: absolute;
+  padding:10px;
+  background-color: transparent;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+.bg {
+  position: absolute;
+  width:100%;
+  height: 0%;
+  border-radius: 6px;
+  z-index:1;
+  transition: 0.3s;
+}
+
+.flavour_item:hover .bg {
+  height:100%;
 }
 
 /*animations*/
