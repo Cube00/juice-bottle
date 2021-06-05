@@ -76,6 +76,11 @@ nav ul li a:hover {
   border-bottom: 2px solid var(--orange);
 }
 
+.activeLink {
+  font-weight:bold;
+  border-bottom: 2px solid var(--orange);
+}
+
 .poster-background {
   display: flex;
   justify-content: center;
@@ -250,6 +255,78 @@ nav ul li a:hover {
   bottom: 20px;
 }
 
+.container-content{
+  width:75%;
+  float:right;
+}
+
+.flavours-container{
+  margin:10px 25px;
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+
+.flavour_item{
+  position: relative;
+  padding:10px;
+  width:250px;
+  background-color:#ececec;
+  border-radius:6px;
+  margin:10px 40px 30px 0px;
+}
+
+.fl-poster-div {
+  display: flex;
+  justify-content: center;
+  padding:20px;
+}
+
+.fl-poster {
+  width:150px;
+}
+
+.flavour_item h2 {
+  padding:10px;
+  font-size:18px;
+  font-family: var(--fontRegular);
+}
+
+.flavour_item p {
+  padding:0px 10px 10px;
+  font-size:14px;
+  font-family: var(--fontRegular);
+}
+
+.flavour_item h4 {
+  padding:0px 10px 10px;
+  font-size:14px;
+  font-family: var(--fontRegular);
+  color: #677c90;
+}
+
+.fruit-image {
+  position: absolute;
+  top:0;
+  left:0;
+  margin-left:-10px;
+  margin-top:-10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:50px;
+  height:50px;
+  background-color:#fff;
+  border-radius:50%;
+  overflow: hidden;
+  border:4px solid#dbdbdd;
+}
+
+.fruit-image img {
+  width:25px;
+}
+
+/*animations*/
 @keyframes slider {
   0% {
     animation-delay: 0.3s;

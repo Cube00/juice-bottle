@@ -8,7 +8,7 @@ const Slider = ({content,id, moveNext, moveBack}) =>{
   const {name, slogan, description, img, background} = content;
   return <>
     <div className="slider-item">
-      <div className={`poster-background `+ `${background}`}>
+      <div className={`poster-background ${background}`}>
         {data.map((fruits)=>{
           return <div key={fruits.id} className={fruits.id === id + 1 ? `fruits active` : 'fruits'}>
             <img  className="img-fruit" src={fruits.fruit.img1} alt=""/>

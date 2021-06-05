@@ -1,5 +1,9 @@
 const About = () =>{
-  return 'About page'
+  return <>
+    <section className="container-content">
+      <h1>About</h1>
+    </section>
+  </>
 }
 
 export default About

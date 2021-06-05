@@ -20,6 +20,7 @@ export const data = [
     slogan: 'A day without juice is like a day without sunshine',
     id: 1,
     background: 'yellow',
+    price: '50.50$',
     fruit: {
       img1: Fruit1,
       img2: Fruit2
@@ -33,6 +34,7 @@ export const data = [
     slogan: 'A day without juice is like a day without sunshine',
     id: 2,
     background: 'green',
+    price: '50.50$',
     fruit: {
       img1: Fruit3,
       img2: Fruit4
@@ -46,6 +48,7 @@ export const data = [
     slogan: 'A day without juice is like a day without sunshine',
     id: 3,
     background: 'red',
+    price: '50.50$',
     fruit: {
       img1: Fruit5,
       img2: Fruit6
