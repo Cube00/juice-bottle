@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react'
-import FlavourPoster from '../assets/images/flavours.png'
 import {data} from '../data/data2'
 import FlavourItem from '../components/UI/flavouritem.js'
 
@@ -12,6 +11,11 @@ const Flavour = () =>{
   const [filter, setFilter] = useState(filterByPrice);
 
   useEffect(()=>{
+    if(color ===''){
+      setFilter(data.filter((item)=>{
+        return Math.round(item.price) > state
+      }))
+    }
     if(color !==''){
       setFilter(data.filter((item)=>{
         return Math.round(item.price) > state && item.background === color
@@ -22,7 +26,6 @@ const Flavour = () =>{
         return Math.round(item.price) > state
       }))
     }
-
   },[color, state])
 
   return <>
