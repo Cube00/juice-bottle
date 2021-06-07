@@ -13,7 +13,7 @@ const FlavourItem = ({item}) =>{
         </div>
         <h2>{name}</h2>
         <p>{slogan}</p>
-        <h4>Price: {price}</h4>
+        <h4>Price: {price}$</h4>
       </div>
     </div>
   </>

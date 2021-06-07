@@ -103,6 +103,10 @@ nav ul li a:hover {
   background-image: linear-gradient(to right, #ee89be, #d9529a);
 }
 
+.purple {
+  background-image: linear-gradient(to right, #6f2da8, #771bc7);
+}
+
 .main-page {
   max-width: 1550px;
   width: 100%;
@@ -353,6 +357,73 @@ nav ul li a:hover {
 
 .flavour_item:hover .bg {
   height:100%;
+}
+
+.catfilter {
+  width:25%;
+  float:left;
+}
+
+.price-filter {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  padding:15px 30px;
+}
+
+.mult-block {
+  display: flex;
+}
+
+.range-input{
+  width:80%;
+}
+
+.price-filter h2{
+  margin-bottom:10px;
+  font-family:var(--fontRegular);
+}
+
+.price-filter h4 {
+  font-family:var(--fontRegular);
+  font-weight:normal;
+  margin-top:5px;
+}
+
+.range {
+  width:90%;
+  cursor:pointer;
+}
+
+.color-flter {
+  margin-top:40px;
+}
+
+.color-flter ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.color-flter ul li{
+  width:50px;
+  text-align: center;
+  margin:10px;
+  font-size:13px;
+  font-family:var(--fontRegular);
+}
+
+.color-flter ul li div {
+  margin-top:10px;
+  width:50px;
+  height:35px;
+  cursor:pointer;
+}
+
+.transparent-color{
+  background-color: transparent;
+  border:1px solid#ddd;
 }
 
 /*animations*/
