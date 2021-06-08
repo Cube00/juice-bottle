@@ -6,6 +6,7 @@ import {createStore, combineReducers} from 'redux'
 //reducers
 import slideReducer from './components/functions/slideReducer'
 import linkReducer from './components/functions/linkReducer'
+import storeReducer from './components/functions/storeReducer'
 //components
 import Header from './components/UI/header'
 //pages
@@ -16,7 +17,13 @@ import Contact from './pages/contact'
 //style
 import './assets/css/main.css'
 
-const store = createStore(combineReducers({slideReducer: slideReducer, linkReducer: linkReducer}),
+const store = createStore(combineReducers(
+  {
+    slideReducer: slideReducer,
+    linkReducer: linkReducer,
+    storeReducer: storeReducer
+  }
+),
 window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 function App() {

@@ -1,14 +1,18 @@
 import React, {useState, useEffect} from 'react'
 import {data} from '../data/data2'
 import FlavourItem from '../components/UI/flavouritem.js'
+import {connect} from 'react-redux'
+import {ADD_TO_CART} from '../components/actions'
+import { useCart } from "../components/cart";
 
-const Flavour = () =>{
+const Flavour = ({addToCart, store}) =>{
   const [color, setColor] = useState('');
   let [state, setState] = useState('15');
   let filterByPrice = data.filter((item)=>{
     return Math.round(item.price) > state
   })
   const [filter, setFilter] = useState(filterByPrice);
+  const {addCart} = useCart();
 
   useEffect(()=>{
     if(color ===''){
@@ -65,7 +69,7 @@ const Flavour = () =>{
       <section className="container-content">
         <div className="flavours-container">
         {filter.map((item)=>{
-          return <FlavourItem key={item.id} item={item}/>
+          return <FlavourItem key={item.id} addCart={()=>addCart(item)} store={store} addToCart={addToCart} item={item}/>
         })}
         </div>
       </section>
@@ -73,4 +77,16 @@ const Flavour = () =>{
   </>
 }
 
-export default Flavour
+const storeFunction = ({storeReducer: {allow, store}}) =>{
+  return {allow, store}
+}
+
+const dispatchForStore = (dispatch) =>{
+  return {
+    addToCart: (store, newItem)=>{
+      dispatch({type: ADD_TO_CART, payload: [...store]});
+    }
+  }
+}
+
+export default connect(storeFunction, dispatchForStore)(Flavour)

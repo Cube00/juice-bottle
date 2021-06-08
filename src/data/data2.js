@@ -33,7 +33,8 @@ export const data = [
     fruit: {
       img1: Fruit1,
       img2: Fruit2
-    }
+    },
+    amount: 0
   },
   {
     name: 'APPLE',
@@ -47,7 +48,8 @@ export const data = [
     fruit: {
       img1: Fruit3,
       img2: Fruit4
-    }
+    },
+    amount: 0
   },
   {
     name: 'CHERRY',
@@ -61,7 +63,8 @@ export const data = [
     fruit: {
       img1: Fruit5,
       img2: Fruit6
-    }
+    },
+    amount: 0
   },
   {
     name: 'GRAPES',
@@ -75,7 +78,8 @@ export const data = [
     fruit: {
       img1: Fruit7,
       img2: Fruit8
-    }
+    },
+    amount: 0
   },
   {
     name: 'LEAMON',
@@ -89,7 +93,8 @@ export const data = [
     fruit: {
       img1: Fruit9,
       img2: Fruit10
-    }
+    },
+    amount: 0
   },
   {
     name: 'BANANA',
@@ -103,6 +108,7 @@ export const data = [
     fruit: {
       img1: Fruit11,
       img2: Fruit12
-    }
+    },
+    amount: 0
   }
 ]
