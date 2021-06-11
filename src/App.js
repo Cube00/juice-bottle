@@ -6,7 +6,7 @@ import {createStore, combineReducers} from 'redux'
 //reducers
 import slideReducer from './components/functions/slideReducer'
 import linkReducer from './components/functions/linkReducer'
-import storeReducer from './components/functions/storeReducer'
+import cartReducer from './components/functions/cartReducer'
 //components
 import Header from './components/UI/header'
 //pages
@@ -21,7 +21,7 @@ const store = createStore(combineReducers(
   {
     slideReducer: slideReducer,
     linkReducer: linkReducer,
-    storeReducer: storeReducer
+    cartReducer: cartReducer
   }
 ),
 window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());

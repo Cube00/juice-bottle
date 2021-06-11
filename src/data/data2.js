@@ -34,7 +34,7 @@ export const data = [
       img1: Fruit1,
       img2: Fruit2
     },
-    amount: 0
+    amount:1
   },
   {
     name: 'APPLE',
@@ -49,7 +49,7 @@ export const data = [
       img1: Fruit3,
       img2: Fruit4
     },
-    amount: 0
+    amount:1
   },
   {
     name: 'CHERRY',
@@ -64,7 +64,7 @@ export const data = [
       img1: Fruit5,
       img2: Fruit6
     },
-    amount: 0
+    amount:1
   },
   {
     name: 'GRAPES',
@@ -79,7 +79,7 @@ export const data = [
       img1: Fruit7,
       img2: Fruit8
     },
-    amount: 0
+    amount:1
   },
   {
     name: 'LEAMON',
@@ -94,7 +94,7 @@ export const data = [
       img1: Fruit9,
       img2: Fruit10
     },
-    amount: 0
+    amount:1
   },
   {
     name: 'BANANA',
@@ -109,6 +109,6 @@ export const data = [
       img1: Fruit11,
       img2: Fruit12
     },
-    amount: 0
+    amount:1
   }
 ]

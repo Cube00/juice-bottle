@@ -1,6 +1,6 @@
 import {connect} from 'react-redux'
 import {data} from '../../data/data1'
-import {PREW_SLIDE, NEXT_SLIDE} from '../actions'
+import {PREW_SLIDE, NEXT_SLIDE} from '../layouts/actions'
 import {IoIosArrowBack} from 'react-icons/io'
 import Social from './social'
 

@@ -1,18 +1,17 @@
-import React, {useState, useEffect} from 'react'
-import {data} from '../data/data2'
-import FlavourItem from '../components/UI/flavouritem.js'
+import React, {useState, useCallback, useEffect} from 'react'
 import {connect} from 'react-redux'
-import {ADD_TO_CART} from '../components/actions'
-import { useCart } from "../components/cart";
+import {data} from '../data/data2'
+import FlavourItem from '../components/UI/flavourItem.js'
+import {ADD_TO_CART, REMOVE_ITEM} from '../components/layouts/actions'
 
-const Flavour = ({addToCart, store}) =>{
+const Flavour = ({cart, add_item}) =>{
   const [color, setColor] = useState('');
   let [state, setState] = useState('15');
+
   let filterByPrice = data.filter((item)=>{
     return Math.round(item.price) > state
   })
   const [filter, setFilter] = useState(filterByPrice);
-  const {addCart} = useCart();
 
   useEffect(()=>{
     if(color ===''){
@@ -69,7 +68,16 @@ const Flavour = ({addToCart, store}) =>{
       <section className="container-content">
         <div className="flavours-container">
         {filter.map((item)=>{
-          return <FlavourItem key={item.id} addCart={()=>addCart(item)} store={store} addToCart={addToCart} item={item}/>
+          return <FlavourItem
+                    key={item.id}
+                    cartItem={
+                      ()=>{
+                        if(!cart.includes(item)){
+                          add_item(cart,item)
+                        }
+                      }
+                    }
+                    item={item}/>
         })}
         </div>
       </section>
@@ -77,16 +85,14 @@ const Flavour = ({addToCart, store}) =>{
   </>
 }
 
-const storeFunction = ({storeReducer: {allow, store}}) =>{
-  return {allow, store}
+const cartFunc = ({cartReducer: {cart}}) => {
+  return {cart}
 }
 
-const dispatchForStore = (dispatch) =>{
+const dispatchFunc = (dispatch) =>{
   return {
-    addToCart: (store, newItem)=>{
-      dispatch({type: ADD_TO_CART, payload: [...store]});
-    }
+    add_item: (cart, item)=>{dispatch({type:ADD_TO_CART, payload: [...cart,item]})},
   }
 }
 
-export default connect(storeFunction, dispatchForStore)(Flavour)
+export default connect(cartFunc, dispatchFunc)(Flavour)

@@ -1,4 +1,4 @@
-import {PREW_SLIDE, NEXT_SLIDE} from '../actions'
+import {PREW_SLIDE, NEXT_SLIDE} from '../layouts/actions'
 import {data} from '../../data/data1'
 
 const defaultState = {

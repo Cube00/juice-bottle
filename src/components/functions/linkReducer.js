@@ -1,4 +1,4 @@
-import {HOME_PAGE, ABOUT_PAGE, FLAVOUR_PAGE, CONTACT_PAGE} from '../actions'
+import {HOME_PAGE, ABOUT_PAGE, FLAVOUR_PAGE, CONTACT_PAGE} from '../layouts/actions'
 
 const defaultState = {
   link: window.location.pathname
