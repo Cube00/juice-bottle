@@ -1,7 +1,12 @@
 const About = () =>{
   return <>
     <section className="container-content">
-      <h1>About</h1>
+      <div className="ab-pg">
+        <h1>About</h1>
+        <p>
+          coming soon . . .
+        </p>
+      </div>
     </section>
   </>
 }

@@ -1,4 +1,3 @@
-import {useState, useEffect} from 'react';
 import {connect} from 'react-redux'
 import {INCREASE, DECREASE} from '../layouts/actions'
 

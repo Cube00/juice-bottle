@@ -1,15 +1,15 @@
-import {useState, useCallback, useEffect} from 'react'
-import {BrowserRouter as Router, Link } from "react-router-dom"
+import {useState} from 'react'
+import {Link } from "react-router-dom"
 import {connect} from 'react-redux'
 import { HOME_PAGE,
   ABOUT_PAGE,
   FLAVOUR_PAGE,
-  CONTACT_PAGE,ADD_TO_CART,
+  CONTACT_PAGE,
   REMOVE_ITEM,
-  INCREASE
 } from '../layouts/actions'
 import {RiSearch2Line} from 'react-icons/ri'
 import {GiShoppingBag} from 'react-icons/gi'
+import {GrFormClose} from 'react-icons/gr'
 import Logo from '../../assets/images/logo.png'
 import CartItem from './cartItem'
 
@@ -33,6 +33,8 @@ const Header = ({link, home, about, flavours, contact, cart, remove,itemInc}) =>
         <GiShoppingBag/>
       </span>
       <div className={state === 'visible' ? 'store visible' : 'store invisible'}>
+        <h1>Store</h1>
+        <span onClick={()=>{stateFunction()}}><GrFormClose /></span>
         {cart.map((store)=>{
           return <CartItem
             key={store.id}

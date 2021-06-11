@@ -1,7 +1,12 @@
 const Contact = () =>{
   return <>
     <section className="container-content">
-      <h1>Contact</h1>
+      <div className="ab-pg">
+        <h1>Contact</h1>
+        <p>
+          coming soon . . .
+        </p>
+      </div>
     </section>
   </>
 }

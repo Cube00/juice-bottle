@@ -27,7 +27,9 @@ const Slider = ({content,id, moveNext, moveBack}) =>{
         <h2>{name}</h2>
         <p>{description}</p>
         <h3>{slogan}</h3>
-        <button className="orderBtn">Order now</button>
+        <a href="/flavours">
+          <button className="orderBtn">Order now</button>
+        </a>
       </div>
       <Social />
     </div>

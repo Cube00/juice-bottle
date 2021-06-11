@@ -1,8 +1,8 @@
-import React, {useState, useCallback, useEffect} from 'react'
+import React, {useState, useEffect} from 'react'
 import {connect} from 'react-redux'
 import {data} from '../data/data2'
 import FlavourItem from '../components/UI/flavourItem.js'
-import {ADD_TO_CART, REMOVE_ITEM} from '../components/layouts/actions'
+import {ADD_TO_CART} from '../components/layouts/actions'
 
 const Flavour = ({cart, add_item}) =>{
   const [color, setColor] = useState('');
